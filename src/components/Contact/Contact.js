@@ -21,7 +21,7 @@ const Contact = () => {
     setStatus("Sending...");
 
     try {
-      await axios.post("http://localhost:5000/contact", formData);
+      await axios.post("https://portfolio-backend-6isn.onrender.com/contact", formData);
       setStatus("✅ Message sent successfully!");
       setFormData({ name: "", email: "", message: "" });
     } catch (error) {
