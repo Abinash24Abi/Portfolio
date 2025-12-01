@@ -41,4 +41,5 @@ app.post('/contact',async(req,res) => {
 
 
 
-app.listen(process.env.PORT,() => {console.log("Server is Running Successfully")})
+app.listen(process.env.PORT || 5000)
+
