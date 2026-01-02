@@ -5,7 +5,16 @@ require('dotenv').config()
 
 
 const app = express();
-app.use(cors());
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    'https://portfolio-pink-two-xpain85uge.vercel.app/'
+  ],
+  methods: ['GET', 'POST'],
+  allowedHeaders: ['Content-Type']
+}));
+
 app.use(express.json());
 
 app.get('/',(req,res) => res.json("The server is working"))
